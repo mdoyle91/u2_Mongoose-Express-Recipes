@@ -22,6 +22,20 @@ const getTypeById = async (req, res) => {
   }
 };
 
+const getTypeByName = async (req, res) => {
+  try {
+    const { name } = req.params;
+    console.log(`Searching for type:`, name);
+    const type = await Type.findOne({ type_name: name });
+    if (type) {
+      return res.json(type);
+    }
+    return res.status(404).send(`${name} not found`);
+  } catch (e) {
+    return res.status(500).send(e.message);
+  }
+};
+
 const createType = async (req, res) => {
   try {
     const type = await new Type(req.body);
@@ -63,6 +77,7 @@ const deleteType = async (req, res) => {
 module.exports = {
   getAllTypes,
   getTypeById,
+  getTypeByName,
   createType,
   updateType,
   deleteType,

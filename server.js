@@ -29,6 +29,7 @@ app.delete("/recipes/:id", recipeController.deleteRecipe);
 
 app.get("/types", typeController.getAllTypes);
 app.get("/types/:id", typeController.getTypeById);
+app.get("/types/name/:name", typeController.getTypeByName);
 app.post("/types", typeController.createType);
 app.put("/types/:id", typeController.updateType);
 app.delete("/types/:id", typeController.deleteType);

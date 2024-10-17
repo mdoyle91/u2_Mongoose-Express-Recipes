@@ -8,6 +8,7 @@ const main = async () => {
   const salmonSushiDirections = await Recipe.find({
     recipe_name: "Salmon Sushi Roll",
   });
+  console.log(salmonSushiDirections);
   const vegSushiDirections = await Recipe.find({
     recipe_name: "Vegetarian Sushi Roll",
   });

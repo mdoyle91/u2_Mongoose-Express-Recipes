@@ -6,16 +6,16 @@ const { Type, Recipe } = require("../models");
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
 const main = async () => {
-  const sushiRecipes = await Type.find({ type_name: "Sushi" });
-  const tacoRecipes = await Type.find({ type_name: "Tacos" });
-  const curryRecipes = await Type.find({ type_name: "Curry" });
-  const pizzaRecipes = await Type.find({ type_name: "Pizza" });
-  const baklavaRecipes = await Type.find({ type_name: "Baklava" });
-  const kimchiRecipes = await Type.find({ type_name: "Kimchi" });
-  const poutineRecipes = await Type.find({ type_name: "Poutine" });
-  const paellaRecipes = await Type.find({ type_name: "Paella" });
-  const phoRecipes = await Type.find({ type_name: "Pho" });
-  const bratwurstRecipes = await Type.find({ type_name: "Bratwurst" });
+  const sushi = await Type.find({ type_name: "Sushi" });
+  const tacos = await Type.find({ type_name: "Tacos" });
+  const curry = await Type.find({ type_name: "Curry" });
+  const pizza = await Type.find({ type_name: "Pizza" });
+  const baklava = await Type.find({ type_name: "Baklava" });
+  const kimchi = await Type.find({ type_name: "Kimchi" });
+  const poutine = await Type.find({ type_name: "Poutine" });
+  const paella = await Type.find({ type_name: "Paella" });
+  const pho = await Type.find({ type_name: "Pho" });
+  const bratwurst = await Type.find({ type_name: "Bratwurst" });
 
   const recipes = [
     {
